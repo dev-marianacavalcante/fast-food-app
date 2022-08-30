@@ -1,32 +1,40 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+import React from 'react'
 import './App.css'
+import Header from "./components/Header"
+import AddOrder from './components/Add-Order'
+import Collapse from './components/Collapse'
+import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
+import OrderModal from './components/Modal'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [modalShow, setModalShow] = React.useState(false);
 
+  function test(params) {
+    console.log("testou")
+    setModalShow(!modalShow)
+  }
+  
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <div className='divAbsolut'> 
+      <Header/>
+      <AddOrder
+        click={test}
+      />
+      <Collapse
+        text="Pedidos em andamento"
+        icon={faAngleDown}
+        icon_color="gray"
+      />
+      <Collapse
+        text="Pedidos concluídos"
+        icon={faAngleDown}
+        icon_color="gray"
+      />
+
+      <OrderModal
+        show={modalShow}
+        onHide={test}
+      />
     </div>
   )
 }

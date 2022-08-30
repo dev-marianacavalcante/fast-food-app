@@ -1,0 +1,9 @@
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px !important;
+}
+.item {
+  display: inline-block;
+  padding-right: 4px;
+}

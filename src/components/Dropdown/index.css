@@ -1,0 +1,12 @@
+* {
+  font-family: 'poppins', 'sans-serif';
+}
+.form-control {
+  padding: 5px;
+  width: 107px;
+  height: 35px;
+  border-radius: 5px;
+  border: transparent;
+  background-color: #4183d9;
+  color: #fff;
+}

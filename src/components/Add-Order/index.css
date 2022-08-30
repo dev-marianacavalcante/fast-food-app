@@ -1,0 +1,20 @@
+.AddOrderButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f20505;
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+}
+
+.AddOrderButton:hover {
+  cursor: pointer;
+  background-color: #f29f05;
+}
+
+.position {
+  top: 80vh;
+  right: 4vh;
+  position: absolute;
+}
