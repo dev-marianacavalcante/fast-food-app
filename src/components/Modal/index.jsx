@@ -14,7 +14,6 @@ function OrderModal(props) {
       {...props}
       className='Modal'
       backdropClassName="Overlay"
-      size="lg"
       aria-labelledby="contained-modal-title-vcenter"
       centered>
 
@@ -26,7 +25,7 @@ function OrderModal(props) {
             <div>
             <Icon
                 selected_icon={faXmark}
-                color='red'
+                color='#000'
                 size='2x'
               />
             </div>
@@ -38,7 +37,9 @@ function OrderModal(props) {
         <ListaHorizontal/>
       </Modal.Body>
       
-      <Footer/>
+      <Modal.Footer>
+        <Footer/>
+      </Modal.Footer>
     </Modal>
   );
 }

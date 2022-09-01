@@ -10,7 +10,6 @@ function App() {
   const [modalShow, setModalShow] = React.useState(false);
 
   function test(params) {
-    console.log("testou")
     setModalShow(!modalShow)
   }
   
